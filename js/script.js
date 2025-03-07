@@ -24,19 +24,19 @@ function sensorClick(){
 }
 
 function createPopUp(parent){
-    let p = document.getElementById("popup")
+    let p = document.getElementById("popup");
 
     if(p){
         p.parentNode.removeChild(p);
     }
 
-    let popup = document.createElement("div")
+    let popup = document.createElement("div");
     popup.id = "popup";
     popup.className = "popup";
     popup.style.top = parent.y - 110 + "px";
     popup.style.left = parent.x -75 + "px";
 
-    let text =  document.createElement("span");
+    let text = document.createElement("span");
     text.textContent = parent.id;
     popup.appendChild(popup);
 
@@ -99,7 +99,7 @@ function dragDiv(){
     if(newLeft < maxLeft && newleft > minLeft) targ.style.left = newleft + `px`;
 
     let newTop = coordY + e.clientY - offsetY;
-    if(newTop < maxTop && newTop > minTop) targ.style.top = newTop + `px`
+    if(newTop < maxTop && newTop > minTop) targ.style.top = newTop + `px`;
     return false;
 }
 
